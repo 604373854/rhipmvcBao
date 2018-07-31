@@ -1,0 +1,29 @@
+server:
+  port: 8811
+  context-path: /rhip
+spring:
+  application:
+    name: rhip
+  datasource:
+    url: jdbc:mysql://localhost:3306/rhip
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  #日志多彩输出
+  output:
+    ansi:
+      enabled: detect
+  profiles:
+    active: dev
+
+# debug 模式
+debug: false
+
+# 自定义属性
+sysConfig:
+  aaa: 1
+  bbb: 2
+  ccc: 3
